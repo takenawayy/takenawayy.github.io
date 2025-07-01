@@ -41,7 +41,7 @@
     }
 
     .nav-links a {
-      font-size: 1.1em;
+      font-size: 1.2em;
       text-decoration: none;
       color: rgb(15, 75, 255);
     }
@@ -204,6 +204,10 @@
         margin-bottom: 30px;
       }
 
+      .nav-links a {
+        font-size: 1.1em;
+      }
+
       .content {
         font-size: 1em;
         padding: 0 10px;
@@ -267,9 +271,14 @@
     <!-- Contact Section -->
     <div id="message-section" class="content">
       <form action="https://formsubmit.co/shuklaisal@gmail.com" method="POST">
-        <textarea name="message" placeholder="Leave a message!" rows="5" required></textarea><br>
-        <button type="submit">Submit</button>
+        <textarea name="message" placeholder="Leave a message..." rows="5" required></textarea><br>
+        <button type="submit">Send</button>
+
+        <!-- Hidden options -->
         <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New message from portfolio site">
+        <!-- You can remove or customize _next -->
+        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html"> -->
       </form>
 
       <p>Email: <a href="mailto:shuklaisal@gmail.com">shuklaisal@gmail.com</a></p>
