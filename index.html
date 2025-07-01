@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <title>About - Isal Shukla</title>
   <style>
@@ -15,6 +16,7 @@
       overflow-x: hidden;
       margin: 0;
       padding: 0;
+      font-size: 16px;
     }
 
     .container {
@@ -83,6 +85,11 @@
       box-shadow: none;
     }
 
+    textarea::placeholder {
+      font-size: 1.1em;
+      color: #777;
+    }
+
     button {
       padding: 10px 20px;
       font-size: 1em;
@@ -101,41 +108,38 @@
       color: rgb(85, 29, 255);
     }
 
-    /* Profile Dot */
-.profile-dot {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-14px, 12px); /* Try 2px–5px depending on how much down you want */
-  width: 15px;
-  height: 15px;
-  background-color: rgb(0, 81, 255);
-  border-radius: 50%;
-  z-index: 999;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+    .profile-dot {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-14px, 12px);
+      width: 15px;
+      height: 15px;
+      background-color: rgb(0, 81, 255);
+      border-radius: 50%;
+      z-index: 999;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
+    .profile-dot:hover {
+      animation: pulse-scale 1.2s infinite;
+    }
 
-.profile-dot:hover {
-  animation: pulse-scale 1.2s infinite;
-}
-
-@keyframes pulse-scale {
-  0% {
-    transform: translate(-14px, 12px) scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
-  }
-  70% {
-    transform: translate(-14px, 12px) scale(1.3);
-    box-shadow: 0 0 0 12px rgba(0, 122, 255, 0);
-  }
-  100% {
-    transform: translate(-14px, 12px) scale(1);
-    box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
-  }
-}
-
+    @keyframes pulse-scale {
+      0% {
+        transform: translate(-14px, 12px) scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 122, 255, 0.7);
+      }
+      70% {
+        transform: translate(-14px, 12px) scale(1.3);
+        box-shadow: 0 0 0 12px rgba(0, 122, 255, 0);
+      }
+      100% {
+        transform: translate(-14px, 12px) scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 122, 255, 0);
+      }
+    }
 
     .profile-dot:hover .profile-box {
       opacity: 1;
@@ -165,6 +169,60 @@
       border-radius: 6px;
       display: block;
     }
+
+    /* --- MOBILE FIXES --- */
+    @media (max-width: 600px) {
+      input,
+      textarea {
+        width: 90%;
+        font-size: 1em;
+      }
+
+      textarea::placeholder {
+        font-size: 1em;
+      }
+
+      button {
+        width: 90%;
+        font-size: 1em;
+        padding: 12px;
+      }
+
+      a {
+        font-size: 1.1em;
+        display: block;
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+      }
+
+      .content {
+        font-size: 1em;
+        padding: 0 10px;
+      }
+
+      .tilt-card {
+        height: auto;
+      }
+
+      .profile-dot {
+        transform: translate(-10px, 10px);
+        width: 12px;
+        height: 12px;
+      }
+
+      .profile-box {
+        width: 100px;
+        padding: 6px;
+      }
+
+      .profile-box img {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -187,13 +245,11 @@
 
     <!-- Intro Content -->
     <div class="content">
+      <p style="font-weight: bold; font-size: 1.2em;">Hey!</p>
+      <p>I'm Isal, a recent graduate of the National Institute of Design, Paldi, specialising in Exhibition Design.</p>
+      <p>At college I worked on projects related to material installations, research and communication design, lighting design and graphic design - coalescing into the skill of experience and exhibition design.</p>
+      <p>Next, I’m exploring new skills such as programming and 3d printing to open pathways to deeper possibilities and new disciplines. I am keen to work at any role that provides challenges and opportunities for real impact!</p>      
 
-        <p style="font-weight: bold; font-size: 1.2em;">Hey!</p>
-        <p>
-        I'm Isal — a Spatial Communication Designer based in New Delhi. I craft narratives and experiences through multidisciplinary media, blending space, visuals, and storytelling to create meaningful impact. I'm passionate about learning, experimenting, and building work that contributes positively to communities!
-      </p>
-
-      <p>Check out some of my past projects:</p>
 
       <!-- Tilt Card -->
       <div class="tilt-card">
@@ -212,9 +268,7 @@
       </form>
 
       <!-- Email -->
-      <p>
-        <a href="mailto:shuklaisal@gmail.com">shuklaisal@gmail.com</a>
-      </p>
+      <p>Email: <a href="mailto:shuklaisal@gmail.com">shuklaisal@gmail.com</a></p>
       <p>Also find me on:</p>
 
       <!-- Social Links -->
@@ -225,9 +279,9 @@
       </p>
     </div>
   </div>
-  <br><br>
-  <p style="font-size: 0.8em; font-style: italic; ">In the making</p>
 
+  <br><br>
+  <p style="font-size: 0.8em; font-style: italic;">In the making</p>
 
   <!-- VanillaTilt.js for Tilt Effect -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
