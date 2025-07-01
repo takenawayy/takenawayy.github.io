@@ -32,14 +32,21 @@
       position: relative;
     }
 
-    a {
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .nav-links a {
       font-size: 1.3em;
-      margin: 0 20px;
       text-decoration: none;
       color: rgb(15, 75, 255);
     }
 
-    a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
     }
 
@@ -104,6 +111,10 @@
     }
 
     .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
       font-size: 0.9em;
       color: rgb(85, 29, 255);
     }
@@ -188,12 +199,6 @@
         padding: 12px;
       }
 
-      a {
-        font-size: 1.1em;
-        display: block;
-        margin: 10px 0;
-      }
-
       h1 {
         font-size: 1.8em;
         margin-bottom: 30px;
@@ -229,7 +234,6 @@
 <body>
 
   <div class="container">
-    <!-- Header & Nav -->
     <h1>Isal Shukla</h1>
 
     <!-- Profile Hover Dot -->
@@ -239,18 +243,19 @@
       </div>
     </div>
 
-    <a href="https://desert-eyebrow-e9e.notion.site/21cbd85b54d68164ac19e3c1fd9f67a0?v=21cbd85b54d681a288ae000c106e5a2c&pvs=74" target="_blank">Project Archive</a>
-    <a href="Isal Shukla Resume.pdf" target="_blank">Resumé</a>
-    <a href="#message-section">Contact</a>
+    <!-- Top Links -->
+    <div class="nav-links">
+      <a href="https://desert-eyebrow-e9e.notion.site/21cbd85b54d68164ac19e3c1fd9f67a0?v=21cbd85b54d681a288ae000c106e5a2c&pvs=74" target="_blank">Project Archive</a>
+      <a href="Isal Shukla Resume.pdf" target="_blank">Resumé</a>
+      <a href="#message-section">Contact</a>
+    </div>
 
-    <!-- Intro Content -->
     <div class="content">
       <p style="font-weight: bold; font-size: 1.2em;">Hey!</p>
       <p>I'm Isal, a recent graduate of the National Institute of Design, Paldi, specialising in Exhibition Design.</p>
       <p>At college I worked on projects related to material installations, research and communication design, lighting design and graphic design - coalescing into the skill of experience and exhibition design.</p>
       <p>Next, I’m exploring new skills such as programming and 3d printing to open pathways to deeper possibilities and new disciplines. I am keen to work at any role that provides challenges and opportunities for real impact!</p>      
-
-
+    <br>
       <!-- Tilt Card -->
       <div class="tilt-card">
         <a href="https://desert-eyebrow-e9e.notion.site/21cbd85b54d68164ac19e3c1fd9f67a0?v=21cbd85b54d681a288ae000c106e5a2c&pvs=74" target="_blank">
@@ -259,7 +264,7 @@
       </div>
     </div>
 
-    <!-- Contact / Message Section -->
+    <!-- Contact Section -->
     <div id="message-section" class="content">
       <form action="https://formsubmit.co/shuklaisal@gmail.com" method="POST">
         <textarea name="message" placeholder="Leave a message!" rows="5" required></textarea><br>
@@ -267,23 +272,22 @@
         <input type="hidden" name="_captcha" value="false">
       </form>
 
-      <!-- Email -->
       <p>Email: <a href="mailto:shuklaisal@gmail.com">shuklaisal@gmail.com</a></p>
       <p>Also find me on:</p>
 
       <!-- Social Links -->
-      <p class="social-links">
+      <div class="social-links">
         <a href="https://www.behance.net/shuklaisal654e" target="_blank">Behance</a>
         <a href="https://www.linkedin.com/in/isal-shukla-6b6094115/" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/isal.off" target="_blank">Instagram</a>
-      </p>
+      </div>
     </div>
   </div>
 
   <br><br>
   <p style="font-size: 0.8em; font-style: italic;">In the making</p>
 
-  <!-- VanillaTilt.js for Tilt Effect -->
+  <!-- VanillaTilt.js -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
   <script>
     VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
