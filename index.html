@@ -76,40 +76,6 @@
       display: block;
     }
 
-    form {
-      margin-top: 20px;
-    }
-
-    input,
-    textarea {
-      width: 60%;
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      background-color: transparent;
-      box-shadow: none;
-    }
-
-    textarea::placeholder {
-      font-size: 1.1em;
-      color: #777;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      cursor: pointer;
-      background-color: #f7f7f7;
-    }
-
-    button:hover {
-      background-color: #b1a3f4;
-      color: white;
-    }
-
     .social-links {
       display: flex;
       justify-content: center;
@@ -183,22 +149,6 @@
 
     /* --- MOBILE FIXES --- */
     @media (max-width: 600px) {
-      input,
-      textarea {
-        width: 90%;
-        font-size: 1em;
-      }
-
-      textarea::placeholder {
-        font-size: 1em;
-      }
-
-      button {
-        width: 90%;
-        font-size: 1em;
-        padding: 12px;
-      }
-
       h1 {
         font-size: 1.8em;
         margin-bottom: 30px;
@@ -236,7 +186,6 @@
 </head>
 
 <body>
-
   <div class="container">
     <h1>Isal Shukla</h1>
 
@@ -251,7 +200,7 @@
     <div class="nav-links">
       <a href="https://desert-eyebrow-e9e.notion.site/21cbd85b54d68164ac19e3c1fd9f67a0?v=21cbd85b54d681a288ae000c106e5a2c&pvs=74" target="_blank">Project Archive</a>
       <a href="Isal Shukla Resume.pdf" target="_blank">Resumé</a>
-      <a href="#message-section">Contact</a>
+      <a href="mailto:shuklaisal@gmail.com">Contact</a>
     </div>
 
     <div class="content">
@@ -261,31 +210,12 @@
           <img src="Project Archive Screenshot.png" alt="Project Archive Screenshot">
         </a>
       </div>
-      <p style="font-weight: bold; font-size: 1.1em; color: #0044cc;">Hey-!</p>
-      <p style="font-size: 1.0em;"> I'm Isal, a recent graduate of NID, Ahmedabad specialising in Exhibition Design.</p>
-      <p>_______________________________________________________________________________</p>
-      <div style= "font-size: 0.8em; margin: 0 10%;">
-      <p>•- As I step into the real world, I find myself drawn to the principles of positive design, sustainability and <a href="https://fs.blog/first-principles/" target="_blank">first principles thinking</a>. I find deep engagement in trying to decode the value of real world organisations/agencies and contribute meaningfully to them through design tools.</p>
-      <p>•- At college I worked on projects related to material installations, research and communication design, lighting design and graphic design - all coalescing into the skill of experience and exhibition design.</p>
-      <p>•- Currently, I’m exploring new skills such as programming, AI tools and 3d printing to open new pathways to deeper design possibilities. I would be pleased to work with a team where I can learn, grow and apply my strengths.</p>
-      </div>
-      </div>
-
-    <!-- Contact Section -->
-    <div id="message-section" class="content">
-      <form action="https://formsubmit.co/shuklaisal@gmail.com" method="POST">
-        <textarea name="message" placeholder="Leave a message..." rows="5" required></textarea><br>
-        <button type="submit">Send</button>
-
-        <!-- Hidden options -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New message from portfolio site">
-        <!-- You can remove or customize _next -->
-        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html"> -->
-      </form>
-
-      <p>Email: <a href="mailto:shuklaisal@gmail.com">shuklaisal@gmail.com</a></p>
-      <p>Also find me on:</p>
+      <p style="font-weight: bold; font-size: 1.1em; color: #0044cc;">This is an archive of projects by Isal Shukla</p>
+      <p style="font-size: 1.0em;"> The following is a collection of projects made during a 4-year program at the National Institute of Design, Ahmedabad as a part of the Bachelors of Design course specialising in Exhibition and Spatial Design.
+      </p>
+      <p style="font-size: 1.0em;"> The resulting body of work is highly formal, multidisciplinary in nature, focusing on creating impactful visual narratives using three-dimensional media.
+      </p>
+      <br><br
 
       <!-- Social Links -->
       <div class="social-links">
@@ -295,9 +225,7 @@
       </div>
     </div>
   </div>
-
-  <br><br>
-  <p style="font-size: 0.8em; font-style: italic;">In the making</p>
+  <br>
 
   <!-- VanillaTilt.js -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
@@ -310,6 +238,5 @@
       scale: 1.05,
     });
   </script>
-
 </body>
 </html>
